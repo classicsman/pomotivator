@@ -1,68 +1,32 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# pomotivator
+A pomodoro timer coupled with a reward for a bit of motivation.
 
-## Available Scripts
+Pomotivator is my Code Louisville JavaScript/React Project. It is designed to be a productivity tool for minimizing distraction and focusing time and effort to get quality work done and rewarding the user with jokes at the end of each cycle (which currently does not work as I want it to).
 
-In the project directory, you can run:
+How to start the application (pretty much standard):
 
-### `npm start`
+0. NPM is required
+1. Clone the repository into a location of your choosing
+2. Run npm start in that location
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Introduction
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+I created the name Pomotivator by conflating the terms 'pomodoro timer' and 'motivator'. The timer is a popular productivity tool generally having the user work for 25 minutes at a time punctuated by five minute break periods. Users endeavor to stay laser-focused for the 25 minutes then can relax guilt-free for five rather than just going haphazardly through their day succumbing to multiple distractions.
 
-### `npm test`
+This App
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The app is comprised of a pomodoro timer, which has adjustable times for both the work and break portions of the timer. The 'classic' times to set it for are 25/5, but being an 80/20 proponent, I prefer 24/6 myself. I let them default to the classic times.
 
-### `npm run build`
+When the break timer commences, three jokes will appear. **This is not yet working, that is, the jokes are fetched when the app starts and after returning from either the How To or About pages, and they remain present all the time, not only when the break period begins and disappearing when it ends, as I want them to (I will get this working later).** These jokes are the 'motivator' part of the app, kind of a reward for user's 25 minutes of focus.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The first of the jokes is from a Chuck Norris API, the second and third are from another API with two endpoints, one of which is a programming joke, the other a miscellaneous one. 
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+**BEWARE - some of these jokes are quite raunchy.**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+There is a limit to how many responses can be done in a minute, so don't click the nav links back and forth or refresh the browser too much or the jokes will stop for a while. Of course, being a React app, refreshing the browser doesn't really need to be be done anyway. Plus, in practice I think one reward set per pomodoro cycle is enough. These APIs don't have too much in them.
 
-### `npm run eject`
+After the break, the timer is reset, and the new work period starts (I don't like the idea of 'work' so I call it 'create').
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+The timer also has a couple of buttons to 1) start/stop, and 2) pause/resume the timer. **Currently, they both start and stop only, the pause/resume is not yet working.**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+The navbar routes go to 'How To' and 'About' pages as well as to 'The App'.
